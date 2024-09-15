@@ -1,0 +1,58 @@
+@import "@/assets/styles/abstracts/constants";
+@import "@/assets/styles/abstracts/placeholders";
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: $color-background-light;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  z-index: 10;
+
+  @extend %transition;
+
+  &_sticky {
+    height: 60px;
+    box-shadow: 0 0 1em 0 $color-background-light;
+    background-color: $color-additional;
+  }
+
+  &__wrapper {
+    max-width: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+
+    @media (width <= 550px) {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  }
+
+  &__logout {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+
+    @media (width <= 550px) {
+      flex-direction: column;
+    }
+  }
+}

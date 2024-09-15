@@ -1,0 +1,102 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: $color-text;
+}
+
+h1 {
+  font-family: $font-poppins;
+  font-weight: $font-bold;
+
+  @media (width <= 600px) {
+    font-size: 24px;
+  }
+
+  @media (width <= 380px) {
+    font-size: 14px;
+  }
+}
+
+h2 {
+  font-family: $font-dm-sans;
+  font-weight: $font-bold;
+  font-size: 60px;
+  text-align: center;
+
+  @media (width <= 400px) {
+    font-size: 40px;
+  }
+}
+
+p {
+  font-family: $font-dm-sans;
+  font-weight: $font-regular;
+}
+
+a {
+  font-family: $font-poppins;
+  font-weight: $font-bold;
+}
+
+span {
+  font-family: $font-poppins;
+  font-weight: $font-regular;
+}
+
+.main {
+  flex: 1 0 auto;
+  background-color: $color-background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button,
+.input,
+.select,
+.textarea {
+  border: 1px solid transparent;
+  padding: 1em 1.5em;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+}
+
+.button {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 20px;
+  background-color: $color-button;
+  color: inherit;
+  font-family: $font-dm-sans;
+  font-weight: $font-medium;
+
+  @extend %transition;
+
+  &:hover {
+    background-color: $color-hover;
+  }
+
+  &:disabled {
+    background-color: $color-disabled;
+  }
+}
+
+.link {
+  @extend %transition;
+
+  &:hover {
+    color: $color-text-hover;
+  }
+}
+
+.textarea {
+  resize: none;
+}
+
+.error {
+  color: $color-error;
+}
